@@ -14,19 +14,16 @@ const getComputerChoice = () => {
 }
 
 const drawGame = () => {
-    console.log('Game was draw.')
     message.innerText = 'The game was a draw,Play Again!';
 }
 const showWinner = (playerWon) => {
     if (playerWon) {
         playerScore++;
         playerScoreBoard.innerText = playerScore;
-        console.log('You won the game!')
         message.innerText = 'You won the game.';
     } else {
         computerScore++;
         computerScoreBoard.innerText = computerScore
-        console.log('You lose the game!')
         message.innerText = 'You lost the game';
 
 
@@ -34,9 +31,7 @@ const showWinner = (playerWon) => {
 }
 
 const playGame = (playerChoice) => {
-    console.log('player', playerChoice)
     const computerChoice = getComputerChoice();
-    console.log('computer', computerChoice)
     if (playerChoice === computerChoice) {
         drawGame();
     } else {
